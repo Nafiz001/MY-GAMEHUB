@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "Player Unknown's Battlegrounds (PUBG)",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo-APmwXJZF8XYXzQMEvbu9pILZprdihwg5A&s",
+    "category": "Battle Royale",
+    "downloadLink": "https://store.epicgames.com/en-US/p/pubg",
+    "description": "PUBG is a battle royale game where players fight for survival on dynamic maps. Land, loot, and outlast your opponents in this intense multiplayer experience.",
+    "ratings": "4.2",
+    "developer": "KRAFTON"
+  },
+  {
+    "id": "2",
+    "title": "Fortnite",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWImyKgl8nBUvUfgHaXUj8DUmI4hj3kAPL6g&s",
+    "category": "Battle Royale",
+    "downloadLink": "https://store.epicgames.com/en-US/p/fortnite",
+    "description": "Fortnite is a free-to-play battle royale game with building mechanics. Drop into the action, build structures, and fight to be the last one standing.",
+    "ratings": "4.5",
+    "developer": "Epic Games"
+  },
+  {
+    "id": "3",
+    "title": "Rocket League",
+    "coverPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCc5h9RWr5eJEFP3vy1RQv6BH2ENWtAbKEfA&s",
+    "category": "Sports",
+    "downloadLink": "https://store.epicgames.com/en-US/p/rocket-league",
+    "description": "Rocket League combines soccer with rocket-powered cars. Score goals and perform amazing aerial shots in this unique sports game.",
+    "ratings": "4.3",
+    "developer": "Psyonix"
+  },
+  {
+    "id": "4",
+    "title": "Genshin Impact",
+    "coverPhoto": "https://wallpapers.com/images/high/genshin-impact-klee-dodoco-and-albedo-jrcivq0760w64ppk.webp",
+    "category": "RPG",
+    "downloadLink": "https://store.epicgames.com/en-US/p/genshin-impact",
+    "description": "Genshin Impact is an open-world action RPG. Explore Teyvat, fight enemies, and uncover the mysteries of this beautiful world.",
+    "ratings": "4.4",
+    "developer": "miHoYo"
+  },
+  {
+    "id": "5",
+    "title": "Apex Legends",
+    "coverPhoto": "https://wallpapers.com/images/high/cool-apex-legends-1920-x-1080-ep4fs7pkyfleqikm.webp",
+    "category": "Battle Royale",
+    "downloadLink": "https://store.epicgames.com/en-US/p/apex-legends",
+    "description": "Apex Legends is a fast-paced battle royale game. Choose your Legend, master your abilities, and fight for victory.",
+    "ratings": "4.1",
+    "developer": "Respawn Entertainment"
+  },
+  {
+    "id": "6",
+    "title": "League of Legends",
+    "coverPhoto": "https://wallpapers.com/images/high/3d-league-of-legends-gyqdn77a421zbc98.webp",
+    "category": "MOBA",
+    "downloadLink": "https://store.epicgames.com/en-US/p/league-of-legends",
+    "description": "League of Legends is a multiplayer online battle arena game. Choose your champion and fight in 5v5 matches.",
+    "ratings": "4.0",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "7",
+    "title": "VALORANT",
+    "coverPhoto": "https://wallpapers.com/images/high/valorant-astra-in7y4vuux4xs32cn.webp",
+    "category": "FPS",
+    "downloadLink": "https://store.epicgames.com/en-US/p/valorant",
+    "description": "VALORANT is a tactical 5v5 FPS game. Use unique abilities and precise gunplay to outplay your opponents.",
+    "ratings": "4.2",
+    "developer": "Riot Games"
+  },
+  {
+    "id": "8",
+    "title": "Among Us",
+    "coverPhoto": "https://wallpapers.com/images/high/among-us-character-9hlmjq9q7k4uvugz.webp",
+    "category": "Social Deduction",
+    "downloadLink": "https://store.epicgames.com/en-US/p/among-us",
+    "description": "Among Us is a multiplayer game of teamwork and betrayal. Complete tasks or sabotage the crew as the imposter.",
+    "ratings": "3.8",
+    "developer": "InnerSloth"
+  },
+  {
+    "id": "9",
+    "title": "Minecraft",
+    "coverPhoto": "https://wallpapers.com/images/high/minecraft-mobs-uh52xefk605jdmm6.webp",
+    "category": "Sandbox",
+    "downloadLink": "https://store.epicgames.com/en-US/p/minecraft",
+    "description": "Minecraft is a sandbox game where you can build, explore, and survive in a blocky world.",
+    "ratings": "4.6",
+    "developer": "Mojang"
+  },
+  {
+    "id": "10",
+    "title": "Cyberpunk 2077",
+    "coverPhoto": "https://wallpapers.com/images/high/cyberpunk2077-game-characterwith-gun-am1pw4kyiu10s8f5.webp",
+    "category": "RPG",
+    "downloadLink": "https://store.epicgames.com/en-US/p/cyberpunk-2077",
+    "description": "Cyberpunk 2077 is an open-world RPG set in Night City. Live as a mercenary and make choices that shape the story.",
+    "ratings": "3.5",
+    "developer": "CD Projekt Red"
+  }
+]

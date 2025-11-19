@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --primary-color: #9333ea;
+  --secondary-color: #3b82f6;
+  --accent-color: #f59e0b;
+  --background-dark: #0f0f0f;
+  --card-bg: #1a1a1a;
+  --text-light: #ffffff;
+  --text-muted: #9ca3af;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+}
+
+.navbar {
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.input, .select, .textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #333;
+  color: var(--text-light);
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.2);
+}
