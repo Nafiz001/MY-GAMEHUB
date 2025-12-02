@@ -13,6 +13,7 @@ const Browse = () => {
   }, []);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('');
+  const [sortBy, setSortBy] = useState('rating-desc');
 
   return (
     <div className="min-h-screen bg-base-200">
@@ -42,9 +43,19 @@ const Browse = () => {
             <option value="social deduction" className="text-gray-900 bg-white">Social Deduction</option>
             <option value="sandbox" className="text-gray-900 bg-white">Sandbox</option>
           </select>
+          <select
+            value={sortBy}
+            className="bg-white text-gray-900 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+            onChange={(e) => setSortBy(e.target.value)}
+          >
+            <option value="rating-desc" className="text-gray-900 bg-white">Rating: High to Low</option>
+            <option value="rating-asc" className="text-gray-900 bg-white">Rating: Low to High</option>
+            <option value="name-asc" className="text-gray-900 bg-white">Name: A to Z</option>
+            <option value="name-desc" className="text-gray-900 bg-white">Name: Z to A</option>
+          </select>
         </div>
 
-        <GameList games={games} searchTerm={searchTerm} genre={selectedGenre} />
+        <GameList games={games} searchTerm={searchTerm} genre={selectedGenre} sortBy={sortBy} />
       </main>
       <Footer />
     </div>

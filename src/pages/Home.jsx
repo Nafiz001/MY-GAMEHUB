@@ -60,7 +60,7 @@ const Home = () => {
       <Header />
       <main className="pt-16">
         {/* Banner Slider */}
-        <section className="relative h-96 md:h-screen overflow-hidden">
+        <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
           <div
             key={currentSlide}
             className="absolute inset-0"
@@ -114,6 +114,104 @@ const Home = () => {
               Popular Games
             </h2>
             <GameList games={games} />
+          </div>
+        </section>
+
+        {/* Categories Section */}
+        <section className="py-16 bg-black">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Browse by Category
+              </h2>
+              <p className="text-gray-400 text-lg">
+                Explore games across different genres and find your next favorite
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {['FPS', 'RPG', 'Strategy', 'Adventure', 'Puzzle', 'Simulation'].map((category, index) => (
+                <motion.a
+                  key={category}
+                  href="/browse"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-linear-to-br from-purple-600/20 to-blue-600/20 backdrop-blur-lg rounded-xl p-6 text-center border border-purple-500/30 hover:border-purple-500 transition-all duration-300 cursor-pointer group"
+                >
+                  <div className="text-4xl mb-3">
+                    {category === 'FPS' && '🎯'}
+                    {category === 'RPG' && '⚔️'}
+                    {category === 'Strategy' && '🧠'}
+                    {category === 'Adventure' && '🗺️'}
+                    {category === 'Puzzle' && '🧩'}
+                    {category === 'Simulation' && '🎮'}
+                  </div>
+                  <h3 className="text-white font-bold text-lg group-hover:text-purple-300 transition-colors">
+                    {category}
+                  </h3>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Developers Section */}
+        <section className="py-16 bg-gray-900">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Featured Developers
+              </h2>
+              <p className="text-gray-400 text-lg">
+                Meet the talented creators behind your favorite indie games
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                { name: 'Indie Studios', games: 5, icon: '🎨', color: 'from-purple-600 to-pink-600' },
+                { name: 'Cosmic Devs', games: 7, icon: '🚀', color: 'from-blue-600 to-cyan-600' },
+                { name: 'Pixel Pioneers', games: 4, icon: '👾', color: 'from-green-600 to-emerald-600' }
+              ].map((dev, index) => (
+                <motion.a
+                  key={dev.name}
+                  href="/developers"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-black/40 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300 cursor-pointer group"
+                >
+                  <div className={`text-5xl mb-4 bg-linear-to-r ${dev.color} bg-clip-text text-transparent`}>
+                    {dev.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                    {dev.name}
+                  </h3>
+                  <p className="text-gray-400 mb-4">{dev.games} games published</p>
+                  <div className="flex items-center gap-2 text-purple-400 font-semibold">
+                    <span>View Profile</span>
+                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
           </div>
         </section>
 

@@ -23,6 +23,8 @@ import MyProfile from '../pages/MyProfile';
 import UpdateProfile from '../pages/UpdateProfile';
 import ForgotPassword from '../pages/ForgotPassword';
 import Developers from '../pages/Developers';
+import About from '../pages/About';
+import Contact from '../pages/Contact';
 import NotFound from '../pages/NotFound';
 import ProtectedRoute from '../components/ProtectedRoute';
 
@@ -43,6 +45,16 @@ const router = createBrowserRouter([
   {
     path: '/developers',
     element: <Developers />,
+    hydrateFallbackElement: <div className="min-h-screen flex items-center justify-center"><div className="loading loading-spinner loading-lg"></div></div>,
+  },
+  {
+    path: '/about',
+    element: <About />,
+    hydrateFallbackElement: <div className="min-h-screen flex items-center justify-center"><div className="loading loading-spinner loading-lg"></div></div>,
+  },
+  {
+    path: '/contact',
+    element: <Contact />,
     hydrateFallbackElement: <div className="min-h-screen flex items-center justify-center"><div className="loading loading-spinner loading-lg"></div></div>,
   },
   {

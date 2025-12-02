@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const Header = () => {
   const { user, logout } = useAuth();
@@ -18,9 +18,8 @@ const Header = () => {
   };
 
   return (
-    <header
-      className="navbar bg-black/80 backdrop-blur-lg shadow-lg fixed top-0 z-50"
-    >
+    <header className="bg-black/80 backdrop-blur-lg shadow-lg fixed top-0 z-50 w-full">
+      <nav className="navbar container mx-auto px-4">
       <div className="navbar-start">
         <motion.div
           whileHover={{ scale: 1.02 }}
@@ -57,6 +56,20 @@ const Header = () => {
           >
             <Link to="/developers" className={`text-white hover:text-purple-400 transition-colors duration-300 ${location.pathname === '/developers' ? 'border-b-2 border-purple-400' : ''}`}>Developers</Link>
           </motion.li>
+          <motion.li
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <Link to="/about" className={`text-white hover:text-purple-400 transition-colors duration-300 ${location.pathname === '/about' ? 'border-b-2 border-purple-400' : ''}`}>About</Link>
+          </motion.li>
+          <motion.li
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <Link to="/contact" className={`text-white hover:text-purple-400 transition-colors duration-300 ${location.pathname === '/contact' ? 'border-b-2 border-purple-400' : ''}`}>Contact</Link>
+          </motion.li>
         </ul>
       </div>
 
@@ -77,6 +90,12 @@ const Header = () => {
             </li>
             <li>
               <Link to="/developers" className={`text-white hover:text-purple-400 transition-colors duration-300 ${location.pathname === '/developers' ? 'text-purple-400' : ''}`}>Developers</Link>
+            </li>
+            <li>
+              <Link to="/about" className={`text-white hover:text-purple-400 transition-colors duration-300 ${location.pathname === '/about' ? 'text-purple-400' : ''}`}>About</Link>
+            </li>
+            <li>
+              <Link to="/contact" className={`text-white hover:text-purple-400 transition-colors duration-300 ${location.pathname === '/contact' ? 'text-purple-400' : ''}`}>Contact</Link>
             </li>
           </ul>
         </div>
@@ -119,6 +138,7 @@ const Header = () => {
           </div>
         )}
       </div>
+      </nav>
     </header>
   );
 };
